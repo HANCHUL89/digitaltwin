@@ -1,0 +1,4 @@
+Object = 기본 객체
+Actor = Object + 위치 기능
+Pawn = Actor +빙의(Possess) 가능
+Character = Pawn +
