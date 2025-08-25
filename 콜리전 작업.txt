@@ -1,0 +1,10 @@
+콜리전 작업
+1. BP_Chair 콜리전 세팅(오버랩) , 피직스 시뮬레이트
+
+2.오버랩 Spawnr 작업(인스턴스 편집가능) , 액터 클래스
+
+3. Swich 작업,디폴트값 지정
+4. Random 위치 스폰
+5. 특정 갯수만 스폰
+
+는 Loop Bdoy 실행되는 상태에 Index 값을 알려준다. Last Index가 되면 Completed가 실행되고 종료한다.
