@@ -1,0 +1,153 @@
+-Unreal 교육
+
+스테틱 매시
+
+
+Object = 기본 객체
+Actor = Object + 위치 기능
+Pawn = Actor +빙의(Possess) 가능
+Character = Pawn + 사람형 캐릭터 전용 기능
+(캡슐 충돌체, 움직임 컴포넌트, 점프/이동 지원, 스켈레탈 메시 사용 가능)
+
+ps.개발자는 노트에 필기하지 않는다!!
+
+이벤트, 액션 개념 중요
+
+컴포넌트 > 추가 > 큐브,스피어,스태틱 메시 등등
+
+이벤트 선택 > 각각의 변수 설정 > 변수를 어떻게 설정할건지 SET(X,Y,Z)
+
+움직이는 대상 > 타겟(컴포넌트)
+
+relative location
+if
+switch
+
+int > 명확하지 않다
+str > 너무 크다 (연산 불리)
+ENUM > 명확하다 >바이트와 사이즈 동일
+- 블루프린트 > 열거형(이름 설정) > 이너머레이터 추가(열거할 항목만큼) >열거기 디스플레이(항목별 이름설정 후 저장)
+
+
+ps.개발자는 외우지 않는다!!
+
+
+콜리전
+
+눈동자 모양 클릭 > 단순콜리전,복합콜리전 선택 가능 대부분 단순콜리전 사용
+스태틱 메시 디테일 피직스 시뮬레이트(활성화) > 중력 활성화 됨
+
+이벤트크래프
+스트링 > Append > 텍스트가 연결되기 때문에 중간에 비어있는 핀을 추가 하여 진행
+
+
+배열
+
+시퀀스 / For Each Loop / Cast BP_xx
+
+변수 오른쪽 클릭 액터 그룹 만들기
+
+00:00 > Append
+
+분 10보다 작다, 초가 10보다 작다
+분 10보다 작다, 초가 10보다 크다
+분 10보다 크다, 초가 10보다 작다
+분 10보다 크다, 초가 10보다 크다
+
+
+블루프린트 인터페이스 > 함수 생성 > 입력 및 출력 값 선택
+
+
+캐릭터
+
+방향
+Forward Vector
+Right Vector
+Up Vector
+
+Simulate Physics 비활성화 > 콜리전 없음으로 설정필요
+
+IA_PressF 컨트롤러 > 매핑 > 키보드 설정
+ThirdPerson에서 IA_PressF 이벤트 통해서 Started
+
+HudWiget > 디자이너 변수 코인 반영 
+함수 ( AddCoin 생성 )
+
+HP_HUD > Create HudWidget > set > Add to ViewPoint
+Get coin > HudWidget 의 Addcoin 
+
+BP_Coin >
+Cast to ThirdPerson Cast To PlayerController 에서 Get HUD 가져와야함
+GetController > Get HUD
+
+
+텍스처 소스 > 크기줄이기(용량줄이기)
+
+이벤트 디스패치 > 변수설정 > 드래그 호출
+
+설정할 BP에서 BeginPlay > BP_Switch 변수 생성 후 눈모양 클릭 > 레벨에서 BP_Switch 설정 > Bind Event 설정 
+
+Create Event  생성 > EventSwitchToggle 함수 생성 > 부울 생성(Event 변수와 동일한 이름)
+
+
+함수 내부의 실행 라인은 모두 연결해야 가독성이 좋다
+
+이주 :  StaterContent 가 같이 불러와 충돌 생길수 있음
+
+플러그인 : 편집 > 플러그인 생성 > 이주 > 플러그인 패키지(별도의 Packages 폴더에 패키징 완료 > 복사 (원하는 프로젝트)
+
+스켈레탈 메시 마우스 우클릭 > 생성 
+
+블렌드 스페이스 화면에서 가로축 세팅 > 최대축값(600), 그리드 분할
+
+ABP 생성 > 이벤트 그래프 복사(변수 생성) > AnimGraph 입력
+
+BP_Charater 생성 > 스켈레탈 메시 에셋 추가 > 애님클래스 설정 > 캡슐 컴포넌트 조절
+
+
+https://www.mixamo.com/
+
+스켈레탈 메시 > 생성 > IK릭
+
+애니메이션 > 리타게팅 >IK리타게티
+
+애니메이션 > 컨트롤 릭 >왼쪽 하단 릭계층구조  임포트
+
+본 마우스 오른쪽 > 새엘리먼트 > 새 컨트롤
+
+
+발 > basic
+
+허리부터 머리 > CCDIK
+
+양손 FABRIK
+
+BP_PlayerState
+
+Character + Controller + PlayerState
+
+
+Print String 활용하여 체크
+
+디버깅 토글 중단점 추가
+
+GameMode 및 GameState 는 모든 블루프린트에 접근이 가능하다
+
+프로그레스 바 > 변수 현재값 및 최대값 필요 > 나누기 (퍼센트)
+
+
+레벨을 만들면 별도로 게임모드를 설정해야한다.
+
+-InPut Mode
+get controller > set Input Mode > Set Show mouse curse(레벨 마다 세팅 필요)
+
+UI only
+
+Game only ( 마우스 커서 표시 X )
+
+Game and UI
+
+
+구조체(ST) > 변수 추가
+
+기타 > 데이터 테이블(DT)

@@ -1,0 +1,25 @@
+나영재 강사님 교육
+
+모델링 / 나이아가라
+
+1.공장 컨텐츠
+2.내가 만들고 싶은 컨텐츠(캐릭터 등)
+
+탕탕특공대 , 애너멀즈
+
+1. Size 체크 - Apply Scale (Ctrl + A)
+2. 러프하게 작업해서 버택스를 늘려서 작업
+  Error-버택스가 겹쳐있을때 기능이 작동을 안한다. >merge - by Distance(M+B)
+
+1.target animation > abp_manny
+2.bs_bear > idle, run 
+3.abp_bear > idle, roop animation check
+4.jump 삭제
+5.controll rig 연결해제
+6.mesh, abp 변경
+7. bp_enemy 복사해서 만들기
+8. ai move to : pawn-self / taeget actor : get player pawn 
+9.navi mesh bound (내비메쉬 바운드) : P, scale 면적을 넓힘
+10.bp_mainsystem : spawn actor from class 
+    Xpos : sined(-1 ~ 1 ) cm multifly : 500
+    YPos : cosd(-1 ~ 1 ) cm multifly : 500
