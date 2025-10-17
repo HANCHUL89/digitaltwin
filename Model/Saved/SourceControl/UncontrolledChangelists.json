@@ -1,0 +1,20 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Unreal project/digitaltwin/Model/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/C/PE/MMBJ932ZOCQUY0EO1HP8DY.uasset",
+				"C:/Unreal project/digitaltwin/Model/Content/0916/Material_001.uasset",
+				"C:/Unreal project/digitaltwin/Model/Content/0916/Material_002.uasset",
+				"C:/Unreal project/digitaltwin/Model/Content/0916/Material_003.uasset",
+				"C:/Unreal project/digitaltwin/Model/Content/0916/Material_004.uasset",
+				"C:/Unreal project/digitaltwin/Model/Content/0916/SM_Sf.uasset",
+				"C:/Unreal project/digitaltwin/Model/Content/0916/SM_Belt.uasset",
+				"C:/Unreal project/digitaltwin/Model/Content/0916/M_Belt.uasset",
+				"C:/Unreal project/digitaltwin/Model/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/0/1G/2LN9YC4VMZM2XXJOFXB8LG.uasset"
+			]
+		}
+	]
+}
