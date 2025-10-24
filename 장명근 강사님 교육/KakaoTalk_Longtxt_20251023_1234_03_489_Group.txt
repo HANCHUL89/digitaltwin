@@ -1,0 +1,28 @@
+뷰포트에서 ~ (틸드키) 눌러 콘솔을 열고 다음 입력:
+
+r.DisplayRenderTargetOverlays 0
+
+
+또는
+
+r.ViewportQualityLevel.Show 0
+
+
+(엔진 버전에 따라 다르지만 r.ViewportQualityLevel.Show 0 이 가장 일반적입니다.)
+
+🔧 방법 2: 프로젝트 세팅에서 비활성화
+
+Edit → Editor Preferences 로 이동
+
+Level Editor → Viewport 섹션으로 이동
+
+“Show Engine Scalability Level” 또는 “Show Quality Level” 항목을 찾아서 체크 해제
+
+🔧 방법 3: 뷰포트 메뉴에서 끄기
+
+뷰포트 왼쪽 상단의 Viewport Options (화면 우상단의 “View Modes” 옆 톱니바퀴 아이콘) 클릭
+
+메뉴 중 Show → Engine Scalability Level 또는 Show → Quality Level 항목 체크 해제
+
+위 세 가지 중 방법 1 또는 2가 가장 확실합니다.
+현재 버전이 언리얼 5.4라면 Editor Preferences → Level Editor → Viewport 에서 “Show Engine Scalability Level” 옵션 끄면 바로 사라질 거예요.
