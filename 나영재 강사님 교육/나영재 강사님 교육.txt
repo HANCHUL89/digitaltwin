@@ -23,3 +23,75 @@
 10.bp_mainsystem : spawn actor from class 
     Xpos : sined(-1 ~ 1 ) cm multifly : 500
     YPos : cosd(-1 ~ 1 ) cm multifly : 500
+
+나이아가라 개념
+
+프로퍼티 : 속성
+이미터 : 파티클의 양
+파티클 : 성냥의 불
+스폰 : 처음에 한번만 작동
+업데이트 : 시간에 따라 변동내용 / 중력,콜리전,스케일컬러
+스케일 : 크기, 배수
+그래프(커브) : 애니메이션
+랜더 : 화면에 어떤 방식으로 보여질 것인지
+
+프로퍼티에서 두개의 이미터는 연결이 되어있으면 같은 시뮬레이션 타깃으로 되어있어야 한다 ( CPU=CPU , GPU=GPU )
+
+Random= noise
+
+다른 이미터에서 발생(위치) > Sample Particles from Other Emitter > 이슈 고침 > 다른 이미터 바인딩
+
+Curl Noise Force = Random 개념과 동일
+
+Generate Collison Evevt > 프로퍼티 ID 체크 > 다른 이미터에서 이벤트 핸들러 소스 > Receive Collision Event
+
+- 언리얼엔진 머티리얼 Blend Mode 정리
+
+1.Opaque (불투명)
+투명도 없음
+빛/그림자 계산 정상 적용
+사용 예: 벽, 바닥, 금속, 캐릭터 바디 등 일반 오브젝트
+
+2.Masked (마스크)
+투명도 0 또는 1만 사용 (중간 투명 없음)
+알파 컷아웃 형태
+사용 예: 나뭇잎, 철망, 가발/머리카락 카드형, 천 레이스
+
+3.Translucent (반투명) / 라이팅 모드 > Surface TranslucencyVolume > 메탈릭 스페룰러 러프니스 활성화
+
+부드러운 투명도 지원
+굴절/유리 느낌 가능
+단점: 그림자 처리 제한, 성능 부담 더 큼
+사용 예: 유리, 물, 얼음, 연기, 안개, 고스트효과
+
+4.Additive (가산)
+색을 배경에 더하는 방식 (검정색은 사라지고 밝은 부분만 남음)
+자체 발광 표현에 안정적
+사용 예: 불꽃, 스파크, 총구 섬광, 네온, 마법 파티클
+
+5.Modulate (곱셈)
+배경 색상에 곱해 어둡게 표현
+특수 상황에서만 사용
+일반적으로 잘 사용하지 않음
+
+6.AlphaComposite
+UI 및 합성용 투명 머티리얼용
+사용 예: HUD, UI Overlay, 후처리 합성
+
+7.AlphaHoldout
+뒤에 있는 오브젝트를 가리는 투명 마스크
+합성 및 영상 작업에서 사용
+
+material: texture (x) gradient(흰and검)
+            additive
+bp_tan: additive(블랙이 표시가 안됨)
+          smoke-panner(이미지이동) x gradient 
+          dynamicParameter:나이아가라에서 접근
+ng_fire: sprite renderer- material-sub uv(플립북)
+          particle update - sub uv animation
+
+Sheild
+Fresnel : 면이 나를 바라보면 검은색 다른곳을 바라보면 흰색 + Depth Fade 
+
+Tornado
+Screw : UV
